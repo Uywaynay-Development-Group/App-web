@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
+/*Estilos para el cuerpo del doc HTML*/
+body {
+    margin: 0;
+    padding: 0; 
+    background-color: #185176;
+}
+
+hr {
+    width:90%;
+    border-color: #FFFFFF;
+}
+
+/*Estilos para el contenedor principal*/
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+/*Estilos para la cabecera*/
+.header {
+    background-color: #185176;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 5%;
+    color: #FFFFFF;
+}
+
+/*Estilos para el logo de la aplicacion*/
+.header .logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logo img {
+    height: 150px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+/*Estilos para el icono de telefono en el encabezado*/
+.header .icon_phone {
+    cursor: pointer;
+}
+
+.header .icon_phone img {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .icon_phone img:hover {
+    transform: scale(1.1);
+}
+
+/*Estilos para el menu de navegacion*/
+.header .menu {
+    list-style: none;
+    
+}
+
+.header .menu li {
+    display: inline-block;
+    padding: 0 20px;
+    margin-right: 20px;
+}
+
+.header .menu li:last-child {
+    margin-right: 40px;
+}
+
+.header .menu li:hover {
+    transform: scale(1.1);
+}
+
+.header .menu a {
+    font-size: 20px;
+    font-family: 'Luxurious Roman', serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header .menu li a:hover {
+    color: #64CFBC;
+}
+
+/*Estilos para el call to action container*/
+
+.call_to_action_container {
+    width: 100%;
+    background-color: #FFEBC5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Luxurious Roman', serif;
+}
+
+.call_to_action_container h1 {
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 40px;
+    
+}
+
+.call_to_action_container p {
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.call_to_action_container .btn button {
+    font-size: 30px;
+    color: #FFFFFF;
+    background-color: #185176;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    padding: 9px 25px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-family: 'Luxurious Roman', serif;
+}
+
+.call_to_action_container .btn button:hover {
+    transform: scale(1.1);
+    background-color: #FFFFFF;
+    color: #185176;
+    font-weight: bold;
+}
+
+/*Estilos para la imagen 1*/
+.image1 {
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+/*Estilos para los subtitulos*/
+.subtitles {
+    margin-top: 20px;
+    border-left-color: #64CFBC;
+    border-left-style: solid;
+    border-left-width: 10px;;
+}
+
+.subtitles h2 {
+    font-size: 35px;
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+/*Estilos para los servicios*/
+.services_container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service {
+    width: 23%;
+    height: 325px;
+    background-color: #363531;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.service img {
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.service img:hover {
+    transform: scale(1.05);
+}
+
+
+.service p {
+    color: #FFFFFF;
+    font-family: 'Luxurious Roman', serif;
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+/*Estilos para la seccion de testimonios*/
+.testimonials_container {
+    list-style: none; 
+    
+}
+
+.testimonials_container li {
+    
+    display: inline-block;
+    padding: 0 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial {
+    margin-top: 20px;
+    background-color: #64CFBC;
+    width: 30%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.testimonial hr {
+    border-color: #363531;
+}
+
+.testimonial p {
+    font-family: 'Luxurious Roman', serif;
+    margin: 30px;
+    font-size: 20px;
+}
+
+.testimonial img {
+    height: 30%;
+    width: auto;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.details {
+    margin-top: none;
+    height: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.details h2 {
+    font-family: 'Literata', serif;
+    margin: 20px;
+    text-align: center;
+}
+
+.details p {
+    font-family: 'Luxurious Roman', serif;
+    margin-top: 20px;
+}
+
+.stars{
+    color:#FFA904;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*Estilos del contenedor de contacto*/
+
+.contact_container {
+    background-color: #363531;
+    margin-top: 5%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact_container h2 {
+    color:#FFFFFF;
+    padding: 10px;
+    font-size: 30px;
+   
+}
+
+.contact_container .btn2 button {
+    font-size: 30px;
+    color:#363531;
+    background-color:#FFEBC5;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    padding: 9px 25px;
+    margin-top: 25px;
+    font-weight: bold;
+    margin-left: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact_container .btn2 button:hover {
+    transform: scale(1.1);
+    background-color: #64CFBC;
+    color: #363531;
+}
+
+.contact_container img {
+    width: auto;
+    height: 100px;
+    margin-left: 50px;
+}
+
+/*Estilos del footer*/
+
+.footer {
+    background-color: #FFEBC5;
+    padding: 4% 10px;
+    margin: 0;
+    margin-top: 4%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer h2 {
+    margin-right: 50%;
+    font-size: 30px;
+}
+
+.social_media_links a {
+    display: inline-block;
+    min-width: 40px;
+    width: 40px;
+    background-color:#363531;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all .5s ease;
+}
+
+.social_media_links a:hover {
+    background-color: #FFEBC5;
+    color: #363531;
+    transform: scale(1.1);
+}
+
+
+
+
+

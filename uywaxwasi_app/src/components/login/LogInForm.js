@@ -1,5 +1,6 @@
 import React from 'react'
 import "../../css/styles.css"
+import { Link } from 'react-router-dom'
 
 const LogInForm = () => {
     return (
@@ -14,15 +15,15 @@ const LogInForm = () => {
             </div>
             <div className='otras-opciones-login'>
                 <p>¿Has olvidado la contraseña?</p>
-                <a href='#'>Recuperala aqui</a>
+                <Link>Recuperala aqui</Link>
             </div>
             <div className='otras-opciones-login'>
                 <p>¿Eres nuevo?</p>
-                <a href='/signup'>Crear cuenta</a>
+                <Link to='/signup'>Crear cuenta</Link>
             </div>
             <hr/>
             <div className='btn-inicio-sesion'>
-                <a href='/medicalhistory'>Iniciar Sesion</a>
+                <Link to='/medicalhistory'>Iniciar Sesion</Link>
             </div>
             
         </div>

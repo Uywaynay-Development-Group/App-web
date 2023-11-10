@@ -1,5 +1,6 @@
 import React from 'react'
 import "../../css/styles.css"
+import { Link } from 'react-router-dom'
 
 const SignUpForm = () => {
     return (
@@ -20,11 +21,11 @@ const SignUpForm = () => {
             </div>
             <div className='otras-opciones-login'>
                 <p>¿Ya tienes una cuenta?</p>
-                <a href='/'>Iniciar Sesion</a>
-            </div>
+                <Link to='/login'>Iniciar Sesion</Link>
+            </div>      
             <hr/>
             <div className='btn-inicio-sesion'>
-                <a href='/medicalhistory'>Registrarse</a>
+                <Link to='/medicalhistory'>Registrarse</Link>
             </div>
             
         </div>

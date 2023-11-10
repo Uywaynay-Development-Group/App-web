@@ -1,22 +1,33 @@
-import React from 'react'
+import React, {useState} from 'react'
+import DropDownMenu from './DropDownMenu'
 import "../../css/styles.css"
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
+    const[openProfile, setOpenProfile] = useState(false);
+
     return (
         <div>
             <header className='header'>
-                <div className='logo'>
+                <Link to="/" className='logo'>
                     <img src='./img/logo.png' alt='logo navbar' />
-                </div>
+                </Link>
                 <nav>
-                <ul class="menu">
-                    <li><a href="/medicalhistory">Historial Medico</a></li>
-                    <li><a href="/activities">Actividades</a></li>
-                    <li><a href="/comunity">Comunidad</a></li>
-                    <li><a href="/reminders">Recordatorios</a></li>
+                <ul className="menu">
+                    <li><Link to="/medicalhistory">Historial Medico</Link></li>
+                    <li><Link to="/activities">Actividades</Link></li>
+                    <li><Link to="/comunity">Comunidad</Link></li>
+                    <li><Link to="/reminders">Recordatorios</Link></li>
                 </ul>
                 </nav>
-            </header>     
+                <div className='icon_profile' onClick={() => setOpenProfile((prev) => !prev)}>
+                    <img src="./img/icono_perfil.png" alt="icono perfil navbar"/>  
+                </div>               
+            </header> 
+            {
+                openProfile && <DropDownMenu/> 
+            } 
+              
         </div>            
         
     )
