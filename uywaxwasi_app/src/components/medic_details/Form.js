@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import MedicDetailsPage from '../../pages/MedicDetailsPage';
 import "../../css/styles.css"
 import axios from 'axios';
 

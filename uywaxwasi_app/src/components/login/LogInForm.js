@@ -1,17 +1,34 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "../../css/styles.css"
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import axios from 'axios';
 
 const LogInForm = () => {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        axios
+            .post('http://localhost:3000/users/login', {email, password})
+            .then(({data}) => {
+                window.location.href = '/medicalhistory';
+            })
+            .catch(error => {
+                alert("Error al iniciar sesion")
+            });
+    };
+    
     return (
-        <div className='login-form'>
+        <form onSubmit={handleSubmit} className='login-form'>
             <h1>Iniciar Sesion</h1>
             <hr/>
             <div className='ingreso-datos-login'>
                 <p>Email:</p>
-                <input type="email" required placeholder='Correo Electronico'></input>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder='Correo Electronico'></input>
                 <p>Contraseña</p>
-                <input type="password" required placeholder='Contraseña'></input>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder='Contraseña'></input>
             </div>
             <div className='otras-opciones-login'>
                 <p>¿Has olvidado la contraseña?</p>
@@ -22,11 +39,9 @@ const LogInForm = () => {
                 <Link to='/signup'>Crear cuenta</Link>
             </div>
             <hr/>
-            <div className='btn-inicio-sesion'>
-                <Link to='/medicalhistory'>Iniciar Sesion</Link>
-            </div>
+            <button type='submit' className='btn-inicio-sesion'>Iniciar Sesion</button>
             
-        </div>
+        </form>
     )
 }
 
