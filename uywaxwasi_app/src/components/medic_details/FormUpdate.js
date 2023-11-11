@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import MedicDetailsPage from '../../pages/MedicDetailsPage';
 import "../../css/styles.css"
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -39,18 +38,16 @@ const FormUpdate = () => {
     return (
         <form onSubmit={handleUpdate} className='form-container' >
             <div className='form' >
-                <p>Añadir Vacuna</p>
+                <p>Actualizar Vacuna</p>
                 <hr/>
                 <div className='form-section'>
                     <h2>Mascota:</h2>
                     <input type='text' value={pet_name} onChange={(e) => setPetName(e.target.value)} required placeholder='Nombre de mascota'/>
-                    <img src='./img/icono_pollo.png' alt='icono para pollo'/>
                 </div>
                 <hr/>
                 <div className='form-section'>
                     <h2>Tipo de Vacuna:</h2>
                     <input type='text' value={name} onChange={(e) => setName(e.target.value)} required placeholder='Nombre de vacuna'/>
-                    <img src='./img/icono_lapiz.png' alt='icono para lapiz'/>
                 </div>       
                 <hr/>
                 <a href='/medicalhistory'><button type='submit'>Actualizar</button></a>
