@@ -4,7 +4,7 @@ import "../../css/styles.css"
 const Title = (title) => {
     return (
         <div className='title'>
-            <img src='./img/img1.png' alt='imagen 1'/>
+            <img src='./img/img_medicdetail.png' alt='imagen 1'/>
             <p>{title.content}</p>
         </div>
     )

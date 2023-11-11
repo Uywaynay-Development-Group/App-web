@@ -2,12 +2,6 @@
 
 /*Estilos generales*/
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #23221F;
-}
-
 /*Estilo para la cabecera*/
 .header {
     background-color: #185176;
@@ -66,6 +60,54 @@ body {
     color: #64CFBC;
 }
 
+/*Estilo para el icono de perfil donde se abrira el dropdown menu*/
+
+.icon_profile img {
+    cursor: pointer;
+    margin-top: 20%;
+    height: 100px;
+    width: auto;
+}
+
+
+
+/*Estilos para el dropdown menu*/
+.drop_down_menu {
+    position: absolute;
+    margin-left: 90%;
+    margin-top: 1%;
+    border-radius: 15px;
+    border: 1px solid #23221F;
+    background-color: #FFFFFF;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+.drop_down_menu::before {
+    content: '';
+    position: absolute;
+    top: -0.6rem;
+    right: 6.1rem;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #FFFFFF;
+    border-left: #23221F;
+    border-top: #23221F;
+}
+
+.drop_down_menu a {
+    text-decoration: none;
+    font-family: 'Luxurious Roman', serif;
+    color: #23221F;
+}
+
+.drop_down_menu a:hover {
+    color: #64CFBC;
+}
+
 /*Estilo de titulos*/
 
 .title {
@@ -73,6 +115,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 0 2%;
+    margin: 0 5%;
 }
 
 .title img {
@@ -90,7 +133,10 @@ body {
 /*Estilo de subtitulos*/
 
 .subtitle {
-    padding: 1% 2%;
+    padding: 0 2%;
+    margin: 0 5%;
+    display: flex;
+    align-items: center;
 }
 
 .subtitle p {
@@ -98,6 +144,7 @@ body {
     font-family: 'Luxurious Roman', serif;
     font-size: 30px;
     letter-spacing: 0em;
+    margin-right: 60px;
 }
 
 hr {
@@ -109,7 +156,8 @@ hr {
 /*Estilo de barra de filtrado*/
 
 .search-bar {
-    margin: 1% 2%;
+    padding: 1% 2%;
+    margin: 0% 5%;
 }
 
 .search-bar input {
@@ -119,6 +167,8 @@ hr {
     background-color: #D9D4BA;
     border-radius: 10px;
     font-family: 'Luxurious Roman', serif;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .search-bar button {
@@ -126,13 +176,26 @@ hr {
     color:#23221F;
     border: none;
     border-radius: 10px;
-    padding: 10px 5%;
+    padding: 10px 4%;
     margin-left: 5px;
     cursor: pointer;
     font-family: 'Luxurious Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /*Estilo para los registros de vacunas*/
+
+.table_vaccines {
+    margin: 2% 7%;
+}
+
+.celda {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
 
 .register {
     display: flex;
@@ -174,8 +237,8 @@ hr {
     font-family: 'Luxurious Roman', serif;
     cursor: pointer;
     transition: all 0.3s;
-    font-weight: bold;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .register button:hover {
@@ -184,12 +247,48 @@ hr {
 
 /*Estilo de formulario par aañadir registro*/
 
+.agregar_registro {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 81%;
+    margin-bottom: 50px;
+}
+
+.agregar_registro img {
+    height: 150px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.agregar_registro img:hover {
+    transform: scale(1.2);
+}
+
+.glass-effect {
+    position: absolute;
+    background: #fafafa10;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
 .form {
-    margin: 1% 20%;
+    margin-top: 50%;
+    position: absolute;
     background-color: #D9D4BA;
     padding: 0.5% 2%;
     border-radius: 20px;
-    
+    height: 50%;
+    width: 50%;
 }
 
 .form p {
@@ -204,6 +303,7 @@ hr {
     display: flex;
     justify-content:flex-end;
     align-items: center;
+    margin: 0 10%;
 }
 
 .form-section h2 {
@@ -215,12 +315,13 @@ hr {
 }
 
 .form-section input {
-    width: 50%;
+    width: 500px;
     padding: 7px;
     background-color:#FFFFFF;
     border-radius: 20px;
     font-family: 'Literata', serif;
     margin-right: 15%;
+    margin-left: 5px;
     color:#23221F;
     border: none;
 }
@@ -241,6 +342,7 @@ hr {
     font-weight: bold;
     font-size: 18px;
     margin-left: 43%;
+    margin-top: 40px;
 }
 
 .form button:hover {
@@ -322,9 +424,13 @@ hr {
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 15px 0;
+    padding: 15px 5%;
     cursor: pointer;
     transition: all 0.3s;
+    border: none;
+    font-family: 'Orelega One', serif;
+    font-size: 25px;
+    width: 40%;
 }
 
 .btn-inicio-sesion a {
@@ -337,3 +443,4 @@ hr {
 .btn-inicio-sesion:hover {
     transform: scale(1.2);
 }
+

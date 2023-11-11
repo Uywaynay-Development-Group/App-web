@@ -1,11 +1,11 @@
 import React from "react";
 import LogInForm from "../components/login/LogInForm"
-import NavBar2 from "../components/shared/Navbar2";
+import NavBarLp from "../components/shared/NavBarLp";
 
 const LogInPage = () => {
     return (
         <div>
-            <NavBar2/>
+            <NavBarLp/>
             <LogInForm/>
         </div>
     )
