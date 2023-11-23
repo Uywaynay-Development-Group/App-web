@@ -3,6 +3,8 @@ import "../../css/styles.css"
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios';
 
+/*window.location.href = '/medicalhistory';*/ 
+
 const LogInForm = () => {
 
     const [email, setEmail] = useState("");
@@ -12,7 +14,8 @@ const LogInForm = () => {
         event.preventDefault();
         axios
             .post('http://localhost:3000/users/login', {email, password})
-            .then(({data}) => {
+            .then( res => {
+                localStorage.setItem("id", res.data.users.id);
                 window.location.href = '/medicalhistory';
             })
             .catch(error => {
