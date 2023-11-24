@@ -16,7 +16,7 @@ const LogInForm = () => {
             .post('http://localhost:3000/users/login', {email, password})
             .then( res => {
                 localStorage.setItem("id", res.data.users.id);
-                window.location.href = '/medicalhistory';
+                window.location.href = '/pets';
             })
             .catch(error => {
                 alert("Error al iniciar sesion")

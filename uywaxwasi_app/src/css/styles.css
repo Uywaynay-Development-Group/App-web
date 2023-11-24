@@ -301,9 +301,48 @@ hr {
 
 .form-section {
     display: flex;
-    justify-content:flex-end;
+    justify-content:flex-start;
     align-items: center;
     margin: 0 10%;
+}
+
+.form-section-subtitle {
+    width: 200px;
+}
+
+.form-section-selection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Literata', serif;
+    margin: 0 10%;
+    
+}
+
+.form-section-selection h2 {
+    color: #23221F;
+    font-family: 'Literata', serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10%;
+}
+
+.form-section-selection select {
+    width: 100%;
+    padding: 7px;
+    background-color:#FFFFFF;
+    border-radius: 20px;
+    font-family: 'Literata', serif;
+ 
+    margin-left: 5px;
+    color:#23221F;
+    border: none;
+}
+
+.form-section-selection img {
+    height: 90px;
+    width: auto;
+    margin-left: 15%;
 }
 
 .form-section h2 {
@@ -315,13 +354,13 @@ hr {
 }
 
 .form-section input {
-    width: 500px;
+    width: 100%;
     padding: 7px;
     background-color:#FFFFFF;
     border-radius: 20px;
     font-family: 'Literata', serif;
-    margin-right: 15%;
-    margin-left: 5px;
+    
+    margin-left: 20px;
     color:#23221F;
     border: none;
 }
@@ -329,6 +368,7 @@ hr {
 .form-section img {
     height: 90px;
     width: auto;
+    margin-left: 15%;
 }
 
 .form button {
@@ -442,5 +482,80 @@ hr {
 
 .btn-inicio-sesion:hover {
     transform: scale(1.2);
+}
+
+/*Estilos paa las tarjetas de mascotas*/
+
+.pet-container {
+    margin: 2% 7%;
+    display: grid; /* Usa el modelo de caja de cuadrícula (grid) */
+    grid-template-columns: repeat(5, 1fr); /* Tres columnas iguales en la cuadrícula */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.pet-card {
+    padding: 2% 4%;
+    background-color:#64CFBC;
+    border-radius: 25px;
+}
+
+.pet-card hr {
+    border-color:#185176;
+    width: 80%;
+    height: 1px;
+}
+
+.pet-card p {
+    text-align: center;
+}
+
+.pet-card-header {
+    color:#23221F;
+    font-family: 'Orelega One', serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pet-card-header img {
+    height: 50px;
+    margin-left: 15px;
+}
+
+.pet-card-body {
+    font-family: 'Luxurious Roman', serif;
+    font-size: 20px;
+    padding: 0 10%;
+}
+
+.pet-card-body p {
+    text-align: start;
+}
+
+.pet-card-footer {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.pet-card-footer button {
+    background-color:#D9D4BA;
+    color:#23221F;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 7%;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Luxurious Roman', serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.pet-card-footer button:hover {
+    transform: scale(1.1);
 }
 

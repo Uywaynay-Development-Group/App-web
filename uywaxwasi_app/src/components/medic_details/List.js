@@ -6,17 +6,38 @@ import { Link } from "react-router-dom";
 const List = () => {
 
     const [vaccines, setVaccines] = useState([]);
+    const [pets, setPets] = useState([]);
     const [search, setSearch] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:3000/vaccines')
+        const userId = localStorage.getItem('id');
+        axios.get(`http://localhost:3000/vaccines/${userId}`)
         .then(res => {
-            setVaccines(res.data.vaccines)
+            setVaccines(res.data.vaccines);
+            const petsIds = res.data.vaccines.map(vaccine => vaccine.petId);
+
+            axios.get(`http://localhost:3000/pets/${userId}`, {
+                params: {
+                    ids: petsIds.join(','),
+                }
+            })
+            .then(res => {
+                setPets(res.data.pets)
+            })
+            .catch(error => {
+                console.error('Error al obtener las mascotas: ', error);
+            });
+
         })
         .catch(error => {
             console.error('Error al obtener los autores: ', error);
         });
     }, []);
+
+    const getPetImg = (petId) => {
+        const pet = pets.find(pet => pet.id === petId);
+        return pet?.icon_url || 'a';
+    };
 
     const searcher = (e) => {
         setSearch(e.target.value)
@@ -67,7 +88,7 @@ const List = () => {
                                 <tr key={value.id}>
                                     <th scope="row">
                                         <div className='register'>
-                                            <img src='./img/icono_gato.png' alt='icono pata gato'/>
+                                            <img src={getPetImg(value.petId)} alt='icon'/>
                                         </div>
                                     </th>
                                     <td>

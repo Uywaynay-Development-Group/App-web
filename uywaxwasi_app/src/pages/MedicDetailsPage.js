@@ -17,7 +17,7 @@ const MedicDetailsPage = () => {
                 openForm && <Form/>
             }
             <NavBar/>
-            <Title content="Historial Medico"/>
+            <Title content="Historial Medico" img="./img/img_medicdetail.png"/>
             <div className="subtitle">
                 <p>Registros Medicos</p>         
             </div>

@@ -14,6 +14,7 @@ const NavBar = () => {
                 </Link>
                 <nav>
                 <ul className="menu">
+                    <li><Link to="/pets">Mascotas</Link></li>
                     <li><Link to="/medicalhistory">Historial Medico</Link></li>
                     <li><Link to="/activities">Actividades</Link></li>
                     <li><Link to="/comunity">Comunidad</Link></li>
