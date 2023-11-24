@@ -7,9 +7,19 @@ const FormUpdate = () => {
     const { vaccineId} = useParams();
     const [name, setName] = useState('');
     const [pet_name, setPetName] = useState('');
+    const [petId, setPetId] = useState(''); 
+    const [pets, setPets] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/vaccines/${vaccineId}`)
+        axios
+            .get(`http://localhost:3000/pets/${localStorage.getItem('id')}`)
+            .then((res) => {
+                setPets(res.data.pets);
+            })
+            .catch((error) => {
+                console.error('Error al conseguir usuario: ', error);
+            });
+        axios.get(`http://localhost:3000/vaccine/${vaccineId}`)
             .then(res => {
                 const vaccineData = res.data.vaccine;
                 setName(vaccineData.name);
@@ -22,6 +32,13 @@ const FormUpdate = () => {
 
     const handleUpdate = (event) => {
         event.preventDefault();
+        axios.get(`http://localhost:3000/pet/${petId}`)
+            .then(res => {
+                setPetName(res.data.pet.name)
+            })
+            .catch(error => {
+                console.error('Error al obtener la mascota escogida: ', error);
+      }     );
         axios.put(`http://localhost:3000/vaccines/${vaccineId}`, {
             name, pet_name
         })
@@ -40,9 +57,18 @@ const FormUpdate = () => {
             <div className='form' >
                 <p>Actualizar Vacuna</p>
                 <hr/>
-                <div className='form-section'>
+                <div className='form-section-selection'>
                     <h2>Mascota:</h2>
-                    <input type='text' value={pet_name} onChange={(e) => setPetName(e.target.value)} required placeholder='Nombre de mascota'/>
+                    <select value={petId} onChange={(e) => setPetId(e.target.value)}>
+                        <option>Seleccionar Mascota</option>
+                        {pets.map((pet) => {
+                            return(
+                                <option key={pet.id} value={pet.id}>
+                                    {pet.name}
+                                </option>
+                            );
+                        })}
+                    </select>
                 </div>
                 <hr/>
                 <div className='form-section'>
