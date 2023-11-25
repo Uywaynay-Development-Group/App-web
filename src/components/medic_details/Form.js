@@ -57,7 +57,7 @@ const Form = () => {
               );
             })}
           </select>
-          <img src='./img/icono_pollo.png' alt='icono para pollo'/>
+          <img src='./img/icono_roedor.png' alt='icono para pollo'/>
         </div>
         <hr/>
         <div className='form-section'>
