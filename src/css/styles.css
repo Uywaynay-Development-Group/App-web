@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600&family=Luxurious+Roman&family=Orelega+One&display=swap');
+
+/*Estilos generales*/
+
+/*Estilo para la cabecera*/
+.header {
+    background-color: #185176;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 5%;
+    color: #FFFFFF;
+    height: 110px;
+    
+}
+
+/*Estilo para el logo de la navbar*/
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+}
+
+/*Estilo para el menu de navegacion*/
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 0 20px;
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 40px;
+}
+
+.menu li:hover {
+    transform: scale(1.1);
+}
+
+.menu a {
+    font-size: 20px;
+    font-family: 'Luxurious Roman', serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #64CFBC;
+}
+
+/*Estilo para el icono de perfil donde se abrira el dropdown menu*/
+
+.icon_profile img {
+    cursor: pointer;
+    margin-top: 20%;
+    height: 100px;
+    width: auto;
+}
+
+
+
+/*Estilos para el dropdown menu*/
+.drop_down_menu {
+    position: absolute;
+    margin-left: 90%;
+    margin-top: 1%;
+    border-radius: 15px;
+    border: 1px solid #23221F;
+    background-color: #FFFFFF;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+.drop_down_menu::before {
+    content: '';
+    position: absolute;
+    top: -0.6rem;
+    right: 6.1rem;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #FFFFFF;
+    border-left: #23221F;
+    border-top: #23221F;
+}
+
+.drop_down_menu a {
+    text-decoration: none;
+    font-family: 'Luxurious Roman', serif;
+    color: #23221F;
+}
+
+.drop_down_menu a:hover {
+    color: #64CFBC;
+}
+
+/*Estilo de titulos*/
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2%;
+    margin: 0 5%;
+}
+
+.title img {
+    height: 150px;
+    width: auto;
+}
+
+.title p {
+    color: #FFFFFF;
+    margin-left: 2%;
+    font-size: 80px;
+    font-family: 'Orelega One', serif;
+}
+
+/*Estilo de subtitulos*/
+
+.subtitle {
+    padding: 0 2%;
+    margin: 0 5%;
+    display: flex;
+    align-items: center;
+}
+
+.subtitle p {
+    color: #D9D4BA;
+    font-family: 'Luxurious Roman', serif;
+    font-size: 30px;
+    letter-spacing: 0em;
+    margin-right: 60px;
+}
+
+hr {
+    border-color: #D9D4BA;
+    width: 100%;
+    height: 1px;
+}
+
+/*Estilo de barra de filtrado*/
+
+.search-bar {
+    padding: 1% 2%;
+    margin: 0% 5%;
+}
+
+.search-bar input {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #185176;
+    background-color: #D9D4BA;
+    border-radius: 10px;
+    font-family: 'Luxurious Roman', serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.search-bar button {
+    background-color: #64CFBC;
+    color:#23221F;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 4%;
+    margin-left: 5px;
+    cursor: pointer;
+    font-family: 'Luxurious Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Estilo para los registros de vacunas*/
+
+.table_vaccines {
+    margin: 2% 7%;
+}
+
+.celda {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.register {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1% 2%;
+    
+}
+
+.register img {
+    height: 100px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.register img:hover {
+    transform: scale(1.2);
+}
+
+.register h2 {
+    color: #FFFFFF;
+    margin-left: 30px;
+    font-family: 'Literata', serif;
+}
+
+.register p {
+    color: #FFFFFF;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Luxurious Roman', serif;
+}
+
+.register button {
+    background-color: #64CFBC;
+    padding: 5px 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Luxurious Roman', serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.register button:hover {
+    transform: scale(1.2);
+}
+
+/*Estilo de formulario par aañadir registro*/
+
+.agregar_registro {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 81%;
+    margin-bottom: 50px;
+}
+
+.agregar_registro img {
+    height: 150px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.agregar_registro img:hover {
+    transform: scale(1.2);
+}
+
+.glass-effect {
+    position: absolute;
+    background: #fafafa10;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.form {
+    margin-top: 50%;
+    position: absolute;
+    background-color: #D9D4BA;
+    padding: 0.5% 2%;
+    border-radius: 20px;
+    height: 50%;
+    width: 50%;
+}
+
+.form p {
+    color: #23221F;
+    font-family: 'Luxurious Roman', serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-section {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.form-section-subtitle {
+    width: 200px;
+}
+
+.form-section-selection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Literata', serif;
+    margin: 0 10%;
+    
+}
+
+.form-section-selection h2 {
+    color: #23221F;
+    font-family: 'Literata', serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10%;
+}
+
+.form-section-selection select {
+    width: 100%;
+    padding: 7px;
+    background-color:#FFFFFF;
+    border-radius: 20px;
+    font-family: 'Literata', serif;
+ 
+    margin-left: 5px;
+    color:#23221F;
+    border: none;
+}
+
+.form-section-selection img {
+    height: 90px;
+    width: auto;
+    margin-left: 15%;
+}
+
+.form-section h2 {
+    color: #23221F;
+    font-family: 'Literata', serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10%;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 7px;
+    background-color:#FFFFFF;
+    border-radius: 20px;
+    font-family: 'Literata', serif;
+    
+    margin-left: 20px;
+    color:#23221F;
+    border: none;
+}
+
+.form-section img {
+    height: 90px;
+    width: auto;
+    margin-left: 15%;
+}
+
+.form button {
+    background-color:#FFFFFF;
+    padding: 1% 2%;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Luxurious Roman', serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 43%;
+    margin-top: 40px;
+}
+
+.form button:hover {
+    transform: scale(1.1);
+}
+
+/*Estilo para el inicio de sesion*/
+
+.login-form {
+    margin: 4% 30%;
+    padding: 1% 2%;
+    background-color: #64CFBC;
+    border-radius: 25px;
+}
+
+.login-form h1 {
+    color: #23221F;
+    font-family: 'Orelega One', serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+.login-form hr {
+    border-color:#23221F;
+    width: 100%;
+    height: 1px;
+}
+
+.ingreso-datos-login {
+    margin: 0 10%;
+    font-family: 'Orelega One', serif;
+    color:#23221F;
+    font-weight:lighter;
+    font-size: 40px;
+    
+}
+
+.ingreso-datos-login input {
+    width: 85%;
+    padding: 10px;  
+    border: none;
+    background-color: #D9D4BA;
+    border-radius: 10px;
+    font-family: 'Luxurious Roman', serif;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.otras-opciones-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%
+}
+
+.otras-opciones-login p {
+    font-family: 'Luxurious Roman', serif;
+    font-weight: bold;
+    margin-right: 2%;
+    margin-bottom: 1px;
+}
+
+.otras-opciones-login a {
+    font-family: 'Luxurious Roman', serif;
+    text-decoration: none;
+    color: #23221F;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+.otras-opciones-login a:hover {
+    transform: scale(1.1);
+}
+
+.btn-inicio-sesion {
+    background-color: #D9D4BA;
+    margin: 20px 30%;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 15px 5%;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-family: 'Orelega One', serif;
+    font-size: 25px;
+    width: 40%;
+}
+
+.btn-inicio-sesion a {
+    text-decoration: none;
+    color: #23221F;
+    font-family: 'Orelega One', serif;
+    font-size: 25px;
+}
+
+.btn-inicio-sesion:hover {
+    transform: scale(1.2);
+}
+
+/*Estilos paa las tarjetas de mascotas*/
+
+.pet-container {
+    margin: 2% 7%;
+    display: grid; /* Usa el modelo de caja de cuadrícula (grid) */
+    grid-template-columns: repeat(5, 1fr); /* Tres columnas iguales en la cuadrícula */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.pet-card {
+    padding: 2% 4%;
+    background-color:#64CFBC;
+    border-radius: 25px;
+}
+
+.pet-card hr {
+    border-color:#185176;
+    width: 80%;
+    height: 1px;
+}
+
+.pet-card p {
+    text-align: center;
+}
+
+.pet-card-header {
+    color:#23221F;
+    font-family: 'Orelega One', serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pet-card-header img {
+    height: 50px;
+    margin-left: 15px;
+}
+
+.pet-card-body {
+    font-family: 'Luxurious Roman', serif;
+    font-size: 20px;
+    padding: 0 10%;
+}
+
+.pet-card-body p {
+    text-align: start;
+}
+
+.pet-card-footer {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.pet-card-footer button {
+    background-color:#D9D4BA;
+    color:#23221F;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 7%;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Luxurious Roman', serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.pet-card-footer button:hover {
+    transform: scale(1.1);
+}
+
+/*Estilos para el calendario*/
+
+.calendar-inputs {
+    margin: 2% 7%;
+    border: none;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.calendar-inputs input {
+    background-color: #D9D4BA;
+    border: none;
+    border-radius: 20px;
+    padding: 13px 10%;
+    margin-right: 130px;
+    font-family: 'Luxurious Roman', serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+}
+
+.calendar-inputs button {
+    border: none;
+    padding: 13px 50px;
+    background-color: #64CFBC;
+    border-radius: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Luxurious Roman', serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.calendar-inputs button:hover {
+    transform: scale(1.1);
+    
+}
+
+.calendar_box {
+    background-color: #64CFBC;
+    border-radius: 40px;
+    margin: 2% 7%;
+    padding: 10px 0;
+}
