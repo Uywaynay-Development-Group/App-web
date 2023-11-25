@@ -12,7 +12,7 @@ const UpdatePetsForm = () => {
     const [age, setAge] = useState('');
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/pets/${petId}`)
+        axios.get(`https://uywaxwasi-api.onrender.com/pets/${petId}`)
             .then(res => {
                 const petData = res.data.pet;
                 setName(petData.name);
@@ -27,7 +27,7 @@ const UpdatePetsForm = () => {
 
     const handleUpdate = (event) => {
         event.preventDefault();
-        axios.put(`http://localhost:3000/pets/${petId}`, {
+        axios.put(`https://uywaxwasi-api.onrender.com/pets/${petId}`, {
             name, type, breed, age
         })
         .then(response => {

@@ -13,7 +13,7 @@ const LogInForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         axios
-            .post('http://localhost:3000/users/login', {email, password})
+            .post('https://uywaxwasi-api.onrender.com/users/login', {email, password})
             .then( res => {
                 localStorage.setItem("id", res.data.users.id);
                 window.location.href = '/pets';

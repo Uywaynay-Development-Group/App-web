@@ -12,14 +12,14 @@ const FormUpdate = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/pets/${localStorage.getItem('id')}`)
+            .get(`https://uywaxwasi-api.onrender.com/pets/${localStorage.getItem('id')}`)
             .then((res) => {
                 setPets(res.data.pets);
             })
             .catch((error) => {
                 console.error('Error al conseguir usuario: ', error);
             });
-        axios.get(`http://localhost:3000/vaccine/${vaccineId}`)
+        axios.get(`https://uywaxwasi-api.onrender.com/vaccine/${vaccineId}`)
             .then(res => {
                 const vaccineData = res.data.vaccine;
                 setName(vaccineData.name);
@@ -32,14 +32,14 @@ const FormUpdate = () => {
 
     const handleUpdate = (event) => {
         event.preventDefault();
-        axios.get(`http://localhost:3000/pet/${petId}`)
+        axios.get(`https://uywaxwasi-api.onrender.com/pet/${petId}`)
             .then(res => {
                 setPetName(res.data.pet.name)
             })
             .catch(error => {
                 console.error('Error al obtener la mascota escogida: ', error);
       }     );
-        axios.put(`http://localhost:3000/vaccines/${vaccineId}`, {
+        axios.put(`https://uywaxwasi-api.onrender.com/vaccines/${vaccineId}`, {
             name, pet_name
         })
         .then(response => {

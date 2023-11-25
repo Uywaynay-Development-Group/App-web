@@ -12,7 +12,7 @@ const SignUpForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:3000/users', {type, name, email, password})
+        axios.post('https://uywaxwasi-api.onrender.com/users', {type, name, email, password})
             .then(response => {
                 alert("Usuario registrado")
                 window.location.href = '/login';

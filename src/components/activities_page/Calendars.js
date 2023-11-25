@@ -18,7 +18,7 @@ const Calendars = () => {
 
   useEffect(() => {
     axios
-    .get(`http://localhost:3000/activities/${id}`)
+    .get(`https://uywaxwasi-api.onrender.com/activities/${id}`)
     .then(res => {
       setActivities(res.data.activities)
     })
@@ -62,7 +62,7 @@ const Calendars = () => {
   const [allEvents, setAllEvents] = useState(events);
 
   const handlePostActivity = (activity) => {
-    axios.post('http://localhost:3000/activities', {
+    axios.post('https://uywaxwasi-api.onrender.com/activities', {
       content: activity.title,
       start: activity.start,
       end: activity.end,
@@ -77,10 +77,10 @@ const Calendars = () => {
   };
 
   const handleDeleteEvent = () => {
-    axios.get(`http://localhost:3000/activity/${newEvent.title}`)
+    axios.get(`https://uywaxwasi-api.onrender.com/activity/${newEvent.title}`)
     .then(res => {
       console.log(res.data.activity)
-      axios.delete(`http://localhost:3000/activities/${res.data.activity.id}`)
+      axios.delete(`https://uywaxwasi-api.onrender.com/activities/${res.data.activity.id}`)
       .then(res => {
         alert("Actividad eliminada")
       })

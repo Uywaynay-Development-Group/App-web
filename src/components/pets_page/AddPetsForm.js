@@ -26,7 +26,7 @@ const AddPetsForm = () => {
         if(type == "Roedor"){
             setUrl("./img/icono_roedor.png");
         }
-        axios.post('http://localhost:3000/pets', {name, type, breed, age, url, user})
+        axios.post('https://uywaxwasi-api.onrender.com/pets', {name, type, breed, age, url, user})
             .then(response => {
                 alert("Mascota registrada")
                 window.location.href = '/pets';

@@ -10,7 +10,7 @@ const PetsList = () => {
     useEffect(() => {
         const userId = localStorage.getItem('id');
         axios
-            .get(`http://localhost:3000/pets/${userId}`)
+            .get(`https://uywaxwasi-api.onrender.com/pets/${userId}`)
             .then(res => {
                 setPets(res.data.pets)
             })
@@ -23,7 +23,7 @@ const PetsList = () => {
         const shouldDelete = window.confirm('¿Estás seguro de eliminar la mascota?');
         if (shouldDelete){
             axios
-                .delete(`http://localhost:3000/pets/${petId}`)
+                .delete(`https://uywaxwasi-api.onrender.com/pets/${petId}`)
                 .then(res => {
                     setPets(pets.filter(value => value.id !== petId));
                 })

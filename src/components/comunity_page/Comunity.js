@@ -19,7 +19,7 @@ const Comunity = () => {
   const [commentText, setCommentText] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3000/events')
+    axios.get('https://uywaxwasi-api.onrender.com/events')
       .then(res => {
         setEvents(res.data);
       })

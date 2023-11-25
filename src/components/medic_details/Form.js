@@ -11,7 +11,7 @@ const Form = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/pets/${localStorage.getItem('id')}`)
+      .get(`https://uywaxwasi-api.onrender.com/pets/${localStorage.getItem('id')}`)
       .then((res) => {
         setPets(res.data.pets);
       })
@@ -22,7 +22,7 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.get(`http://localhost:3000/pet/${petId}`)
+    axios.get(`https://uywaxwasi-api.onrender.com/pet/${petId}`)
       .then(res => {
         setPetName(res.data.pet.name)
       })
@@ -30,7 +30,7 @@ const Form = () => {
         console.error('Error al obtener la mascota escogida: ', error);
       });
 
-    axios.post('http://localhost:3000/vaccines', {name, pet_name, petId, userId: localStorage.getItem('id')})
+    axios.post('https://uywaxwasi-api.onrender.com/vaccines', {name, pet_name, petId, userId: localStorage.getItem('id')})
       .then(response => {
         alert("Vacuna registrada")
         window.location.href = '/medicalhistory';

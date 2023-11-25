@@ -11,12 +11,12 @@ const List = () => {
 
     useEffect(() => {
         const userId = localStorage.getItem('id');
-        axios.get(`http://localhost:3000/vaccines/${userId}`)
+        axios.get(`https://uywaxwasi-api.onrender.com/vaccines/${userId}`)
         .then(res => {
             setVaccines(res.data.vaccines);
             const petsIds = res.data.vaccines.map(vaccine => vaccine.petId);
 
-            axios.get(`http://localhost:3000/pets/${userId}`, {
+            axios.get(`https://uywaxwasi-api.onrender.com/pets/${userId}`, {
                 params: {
                     ids: petsIds.join(','),
                 }
@@ -56,7 +56,7 @@ const List = () => {
         const shouldDelete = window.confirm('¿Estás seguro de eliminar la vacuna?');
         if(shouldDelete){
             axios
-                .delete(`http://localhost:3000/vaccines/${vaccineId}`)
+                .delete(`https://uywaxwasi-api.onrender.com/vaccines/${vaccineId}`)
                 .then(res => {
                     setVaccines(vaccines.filter(value => value.id !== vaccineId));
                 })
